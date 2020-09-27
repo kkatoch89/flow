@@ -24,7 +24,10 @@ class MainComp extends Component {
 
 			for (const key in data) {
 				// Push task inside of temporary array
-				newState.push(data[key]);
+				newState.push({
+					key: key,
+					eachTask: data[key],
+				});
 			}
 
 			// Update our React state for tasks
@@ -55,6 +58,16 @@ class MainComp extends Component {
 		});
 	};
 
+	// Get the specific task key to remove
+	// Delete that specific task from Firebase
+	handleRemove = (taskKey) => {
+		// Open up Firebase portal
+		const dbRef = firebase.database().ref();
+
+		// Delete the task based on bookKey
+		dbRef.child(taskKey).remove();
+	};
+
 	render() {
 		const { tasks, usrInput } = this.state;
 		return (
@@ -64,7 +77,7 @@ class MainComp extends Component {
 					change={this.addTaskHandler}
 					click={this.submitTaskHandler}
 				/>
-				<Tasks tasksArr={tasks} />
+				<Tasks tasksArr={tasks} delClick={this.handleRemove} />
 			</main>
 		);
 	}

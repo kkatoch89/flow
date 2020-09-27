@@ -1,12 +1,13 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import CheckBox from './CheckBox.js';
+import DelBtn from './DelBtn.js';
 
 const Task = (props) => {
 	return (
 		<li>
+			<CheckBox />
 			{props.task}
-			<FontAwesomeIcon icon={faTrashAlt} />
+			<DelBtn delClick={props.delClick} />
 		</li>
 	);
 };

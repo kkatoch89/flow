@@ -6,7 +6,15 @@ const Tasks = (props) => {
 	return (
 		<ul>
 			{tasksArray.map((task) => {
-				return <Task task={task} />;
+				return (
+					<Task
+						task={task.eachTask}
+						key={task.key}
+						delClick={(e) => {
+							props.delClick(task.key);
+						}}
+					/>
+				);
 			})}
 		</ul>
 	);
