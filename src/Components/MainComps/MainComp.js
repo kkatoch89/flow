@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
+import Styles from '../../App.css';
 import InputComp from './InputComp.js';
 import Tasks from './Tasks.js';
 
@@ -72,12 +73,16 @@ class MainComp extends Component {
 		const { tasks, usrInput } = this.state;
 		return (
 			<main>
-				<InputComp
-					value={usrInput}
-					change={this.addTaskHandler}
-					click={this.submitTaskHandler}
-				/>
-				<Tasks tasksArr={tasks} delClick={this.handleRemove} />
+				<section>
+					<div className="wrapper">
+						<InputComp
+							value={usrInput}
+							change={this.addTaskHandler}
+							click={this.submitTaskHandler}
+						/>
+						<Tasks tasksArr={tasks} delClick={this.handleRemove} />
+					</div>
+				</section>
 			</main>
 		);
 	}
