@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Styles from '../../App.css';
+import Styles from './Header.css';
 import axios from 'axios';
+import UserName from './UserName.js';
+import Logo from './Logo.js';
 
 class Header extends Component {
 	constructor(props) {
@@ -9,11 +11,16 @@ class Header extends Component {
 			bkground: {
 				usrChoice: '',
 				url: '',
+				headerImg: '',
+			},
+			usr: {
+				name: 'John Smith',
 			},
 		};
 	}
 
 	componentDidMount() {
+		console.log('o');
 		const apiKey = 'II3ASpAqNfI4gpWE2HdYIORRcGNtpm5N6UBeF2cBQQc';
 		axios({
 			method: 'GET',
@@ -25,30 +32,42 @@ class Header extends Component {
 				format: 'json',
 			},
 		}).then((res) => {
-			// Code to run after data comes back from API
-			// Path: res.data[index].urls.full
-			// console.log('Pointer', res.data[1].urls.full);
-			// const image = res.data[1].urls.full;
+			console.log(res);
 			const randIndx = Math.floor(Math.random() * res.data.length);
-			console.log(randIndx);
-			this.setState((prevState) => {
-				let bkground = Object.assign({}, prevState.bkground);
-				bkground.url = res.data[randIndx].urls.full;
-				return { bkground };
-			});
+			const randImg = res.data[randIndx].urls.full;
+			this.setState(
+				(prevState) => {
+					let bkground = Object.assign({}, prevState.bkground);
+					bkground.url = randImg;
+					bkground.headerImg = `linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(
+						${randImg}
+						)`;
+					return { bkground };
+				},
+				() => {
+					console.log('SetState: ', this.state.bkground.headerImg);
+				}
+			);
+			console.log('ComponentDidMount: ', this.state.bkground.headerImg);
 		});
-		console.log('Success!', this.state.bkground.url);
 	}
 
 	render() {
-		const headerImg = {
-			backgroundImage:
-				'linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(' +
-				this.state.bkground.url +
-				')',
+		const {
+			bkground: { usrChoice, url, headerImg },
+			usr: { name },
+		} = this.state;
+
+		const heroImg = {
+			backgroundImage: headerImg,
 		};
-		console.log('rendered', this.state.bkground.url);
-		return <header style={headerImg}></header>;
+
+		return (
+			<header style={heroImg}>
+				<Logo />
+				<UserName usrName={name} />
+			</header>
+		);
 	}
 }
 

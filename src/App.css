@@ -306,30 +306,29 @@ textarea {
 /**********************  
   GLOBAL
 **********************/
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Secular+One&family=Source+Sans+Pro&display=swap');
 
 body {
 	font-size: 62.5%;
 }
 
-header {
-	height: 30vh;
-}
-
 .wrapper {
-	width: 85%;
-	max-width: 1360px;
+	width: 80%;
+	max-width: 1080px;
 	margin: 0 auto;
 	padding: 2.5rem 0;
 }
 
 p {
 	font-size: 2.5rem;
+	font-family: 'Architects Daughter', cursive;
 }
 
-/**********************  
-  HEADER
-**********************/
 header {
+	height: 30vh;
+	padding: 1rem;
 	background-size: cover;
+	background-position: center;
+	color: white;
+	border: orangered 2px solid;
 }

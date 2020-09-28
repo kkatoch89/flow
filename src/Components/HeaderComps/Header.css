@@ -1,0 +1,32 @@
+/**********************  
+  HEADER
+**********************/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Secular+One&family=Source+Sans+Pro&display=swap');
+
+.userName {
+	text-align: center;
+	font-family: 'Secular One', sans-serif;
+	font-size: 2.4rem;
+	text-transform: capitalize;
+	color: rgb(189, 189, 189);
+}
+
+.logoBox {
+	font-family: 'Secular One', sans-serif;
+	font-size: 1.6rem;
+	display: flex;
+	text-transform: uppercase;
+}
+
+.logoBox p {
+	font-family: 'Secular One', sans-serif;
+	font-size: 7px;
+	letter-spacing: 1.7px;
+	background-color: orangered;
+}
+
+/*     font-family: 'Architects Daughter', cursive;
+
+    font-family: 'Secular One', sans-serif;
+
+    font-family: 'Source Sans Pro', sans-serif; */
