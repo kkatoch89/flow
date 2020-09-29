@@ -25,6 +25,17 @@
 	background-color: orangered;
 }
 
+.clock {
+	font-family: 'Secular One', sans-serif;
+	font-size: 1.5rem;
+	color: orangered;
+}
+
+.logoClockBox {
+	display: flex;
+	justify-content: space-between;
+}
+
 /*     font-family: 'Architects Daughter', cursive;
 
     font-family: 'Secular One', sans-serif;

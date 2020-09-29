@@ -12,8 +12,12 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
     "firebase": "^7.21.1",
+    "moment": "^2.29.0",
+    "moment-timezone": "^0.5.31",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-live-clock": "^5.0.2",
+    "react-moment": "^1.0.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {

@@ -73,16 +73,16 @@ class MainComp extends Component {
 		const { tasks, usrInput } = this.state;
 		return (
 			<main>
-				<section>
-					<div className="wrapper">
+				<div className="wrapper">
+					<section>
 						<InputComp
 							value={usrInput}
 							change={this.addTaskHandler}
 							click={this.submitTaskHandler}
 						/>
 						<Tasks tasksArr={tasks} delClick={this.handleRemove} />
-					</div>
-				</section>
+					</section>
+				</div>
 			</main>
 		);
 	}

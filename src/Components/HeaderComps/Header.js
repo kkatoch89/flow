@@ -3,6 +3,7 @@ import Styles from './Header.css';
 import axios from 'axios';
 import UserName from './UserName.js';
 import Logo from './Logo.js';
+import Clock from './Clock.js';
 
 class Header extends Component {
 	constructor(props) {
@@ -15,6 +16,9 @@ class Header extends Component {
 			},
 			usr: {
 				name: 'John Smith',
+			},
+			clock: {
+				timeZone: 'US/Pacific',
 			},
 		};
 	}
@@ -39,7 +43,7 @@ class Header extends Component {
 				(prevState) => {
 					let bkground = Object.assign({}, prevState.bkground);
 					bkground.url = randImg;
-					bkground.headerImg = `linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(
+					bkground.headerImg = `linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(
 						${randImg}
 						)`;
 					return { bkground };
@@ -64,8 +68,12 @@ class Header extends Component {
 
 		return (
 			<header style={heroImg}>
-				<Logo />
-				<UserName usrName={name} />
+				<div className="wrapper">
+					<div className="logoClockBox">
+						<Logo /> <Clock />
+					</div>
+					<UserName usrName={name} />
+				</div>
 			</header>
 		);
 	}

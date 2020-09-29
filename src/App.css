@@ -310,13 +310,13 @@ textarea {
 
 body {
 	font-size: 62.5%;
+	background-color: #636363;
 }
 
 .wrapper {
 	width: 80%;
 	max-width: 1080px;
 	margin: 0 auto;
-	padding: 2.5rem 0;
 }
 
 p {
@@ -331,4 +331,9 @@ header {
 	background-position: center;
 	color: white;
 	border: orangered 2px solid;
+}
+
+section {
+	background-color: white;
+	min-height: 80vh;
 }
