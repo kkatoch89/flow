@@ -310,7 +310,7 @@ textarea {
 
 body {
 	font-size: 62.5%;
-	background-color: #636363;
+	background-color: #333333;
 }
 
 .wrapper {
@@ -319,18 +319,11 @@ body {
 	margin: 0 auto;
 }
 
-p {
-	font-size: 2.5rem;
-	font-family: 'Architects Daughter', cursive;
-}
-
 header {
 	height: 30vh;
-	padding: 1rem;
 	background-size: cover;
 	background-position: center;
 	color: white;
-	border: orangered 2px solid;
 }
 
 section {

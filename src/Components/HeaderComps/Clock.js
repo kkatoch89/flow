@@ -3,9 +3,9 @@ import LiveClock from 'react-live-clock';
 
 function Clock() {
 	return (
-		<div className="clock">
+		<time className="clock">
 			<LiveClock format="hh:mm:ss" ticking="true" timezone="US/Pacific" />
-		</div>
+		</time>
 	);
 }
 
