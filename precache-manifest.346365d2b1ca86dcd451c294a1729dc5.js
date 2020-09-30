@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aae1b9a616c51d3a5273e0e435e35833",
+    "revision": "06e48862bd8234a6eb2ebdca3c34a0f4",
     "url": "/karan-katoch-project-five/index.html"
   },
   {
-    "revision": "30481c77b95e66124bdd",
+    "revision": "582c7a92109d7e670ab3",
     "url": "/karan-katoch-project-five/static/css/main.77b03b61.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/karan-katoch-project-five/static/js/2.307ea30b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "30481c77b95e66124bdd",
-    "url": "/karan-katoch-project-five/static/js/main.2efd7d36.chunk.js"
+    "revision": "582c7a92109d7e670ab3",
+    "url": "/karan-katoch-project-five/static/js/main.9c2038cc.chunk.js"
   },
   {
     "revision": "82424a233c0dd4b4fec9",
