@@ -7,6 +7,7 @@ const CheckBox = (props) => {
 			className="checkbox"
 			id={props.id}
 			onClick={props.statusCheck}
+			defaultChecked={props.status}
 		/>
 	);
 };
