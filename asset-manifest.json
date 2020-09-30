@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/karan-katoch-project-five/static/css/main.77b03b61.chunk.css",
+    "main.js": "/karan-katoch-project-five/static/js/main.2efd7d36.chunk.js",
+    "main.js.map": "/karan-katoch-project-five/static/js/main.2efd7d36.chunk.js.map",
+    "runtime-main.js": "/karan-katoch-project-five/static/js/runtime-main.445180a6.js",
+    "runtime-main.js.map": "/karan-katoch-project-five/static/js/runtime-main.445180a6.js.map",
+    "static/js/2.307ea30b.chunk.js": "/karan-katoch-project-five/static/js/2.307ea30b.chunk.js",
+    "static/js/2.307ea30b.chunk.js.map": "/karan-katoch-project-five/static/js/2.307ea30b.chunk.js.map",
+    "index.html": "/karan-katoch-project-five/index.html",
+    "precache-manifest.7b20525f98ceca12675f144a123ace30.js": "/karan-katoch-project-five/precache-manifest.7b20525f98ceca12675f144a123ace30.js",
+    "service-worker.js": "/karan-katoch-project-five/service-worker.js",
+    "static/css/main.77b03b61.chunk.css.map": "/karan-katoch-project-five/static/css/main.77b03b61.chunk.css.map",
+    "static/js/2.307ea30b.chunk.js.LICENSE.txt": "/karan-katoch-project-five/static/js/2.307ea30b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.445180a6.js",
+    "static/js/2.307ea30b.chunk.js",
+    "static/css/main.77b03b61.chunk.css",
+    "static/js/main.2efd7d36.chunk.js"
+  ]
+}
