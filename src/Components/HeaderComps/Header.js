@@ -25,7 +25,6 @@ class Header extends Component {
 	}
 
 	componentDidMount() {
-		console.log('o');
 		const apiKey = 'II3ASpAqNfI4gpWE2HdYIORRcGNtpm5N6UBeF2cBQQc';
 		axios({
 			method: 'GET',
@@ -37,7 +36,7 @@ class Header extends Component {
 				format: 'json',
 			},
 		}).then((res) => {
-			console.log(res);
+			// console.log(res);
 			const randIndx = Math.floor(Math.random() * res.data.length);
 			const randImg = res.data[randIndx].urls.full;
 			this.setState(
@@ -50,10 +49,10 @@ class Header extends Component {
 					return { bkground };
 				},
 				() => {
-					console.log('SetState: ', this.state.bkground.headerImg);
+					// console.log('SetState: ', this.state.bkground.headerImg);
 				}
 			);
-			console.log('ComponentDidMount: ', this.state.bkground.headerImg);
+			// console.log('ComponentDidMount: ', this.state.bkground.headerImg);
 		});
 	}
 

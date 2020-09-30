@@ -9,7 +9,6 @@ class MainComp extends Component {
 		super(props);
 		this.state = {
 			tasks: [],
-			completedTasks: [],
 			usrInput: '',
 		};
 	}
@@ -28,7 +27,8 @@ class MainComp extends Component {
 				// Push task inside of temporary array
 				newState.push({
 					key: key,
-					eachTask: data[key],
+					eachTask: data[key].task,
+					complete: data[key].complete,
 				});
 			}
 
@@ -56,11 +56,17 @@ class MainComp extends Component {
 		// Open portal to Firebase
 		const dbRef = firebase.database().ref('tasks');
 
+		// Creating task obj
+		const newTask = {
+			task: this.state.usrInput,
+			complete: false,
+		};
+
 		if (!this.state.usrInput.length) {
 			this.setState({ validationAlert: true });
 		} else {
 			// Add new record to Firebase
-			dbRef.push(this.state.usrInput);
+			dbRef.push(newTask);
 			this.setState({
 				usrInput: '',
 			});
@@ -77,9 +83,9 @@ class MainComp extends Component {
 		dbRef.child(taskKey).remove();
 	};
 
-	handleComplete = (taskKey) => {
-		console.log();
-	};
+	// handleComplete = (taskKey) => {
+	// 	console.log();
+	// };
 
 	render() {
 		const { tasks, usrInput } = this.state;
