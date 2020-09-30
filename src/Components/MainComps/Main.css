@@ -36,12 +36,19 @@ form button:active {
 } */
 
 .task {
-	border: 1px orangered solid;
+	/* border: 1px orangered solid; */
 	font-family: 'Kanit', sans-serif;
-	font-size: 2rem;
 	line-height: 1.6;
 	display: flex;
 	align-items: center;
+}
+
+.label {
+	font-size: 2rem;
+}
+
+.task.trashIcon {
+	font-size: 3rem;
 }
 
 .checkbox {
@@ -96,7 +103,7 @@ form button:active {
 		width: 0;
 	}
 	100% {
-		width: 100%;
+		width: 90%;
 	}
 }
 .strike {
@@ -107,11 +114,11 @@ form button:active {
 	position: absolute;
 	top: 50%;
 	left: 0;
-	width: 100%;
+	width: 90%;
 	height: 1px;
 	background: black;
 	animation-name: strike;
-	animation-duration: 4s;
+	animation-duration: 0.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;

@@ -3,12 +3,15 @@ import CheckBox from './CheckBox.js';
 import DelBtn from './DelBtn.js';
 
 const Task = (props) => {
-	const labelStyle = 'label';
-	// strikeTask = () => {};
+	console.log(props);
+	let labelStyle = 'task';
+	if (props.status) {
+		labelStyle = 'task strike';
+	}
 	return (
 		<li className="task">
-			<CheckBox id={props.id} />
-			<label className={labelStyle} for={props.id}>
+			<CheckBox id={props.id} statusCheck={props.statusCheck} />
+			<label className="label" for={props.id}>
 				{props.task}
 			</label>
 			<DelBtn delClick={props.delClick} />

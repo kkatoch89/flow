@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
-import Styles from './Main.css';
 import InputComp from './InputComp.js';
 import Tasks from './Tasks.js';
 
@@ -83,9 +82,16 @@ class MainComp extends Component {
 		dbRef.child(taskKey).remove();
 	};
 
-	// handleComplete = (taskKey) => {
-	// 	console.log();
-	// };
+	handleComplete = (taskKey, status) => {
+		// Open up Firebase portal
+		const dbRef = firebase.database().ref('tasks');
+
+		const statusUpdate = {
+			complete: !status,
+		};
+
+		dbRef.child(taskKey).update(statusUpdate);
+	};
 
 	render() {
 		const { tasks, usrInput } = this.state;
@@ -98,7 +104,11 @@ class MainComp extends Component {
 							change={this.addTaskHandler}
 							click={this.submitTaskHandler}
 						/>
-						<Tasks tasksArr={tasks} delClick={this.handleRemove} />
+						<Tasks
+							tasksArr={tasks}
+							delClick={this.handleRemove}
+							status={this.handleComplete}
+						/>
 					</section>
 				</div>
 			</main>
