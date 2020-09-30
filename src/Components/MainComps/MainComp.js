@@ -9,13 +9,14 @@ class MainComp extends Component {
 		super(props);
 		this.state = {
 			tasks: [],
+			completedTasks: [],
 			usrInput: '',
 		};
 	}
 
 	componentDidMount() {
 		// Open portal to Firebase
-		const dbRef = firebase.database().ref();
+		const dbRef = firebase.database().ref('tasks');
 
 		// Listen to value change
 		dbRef.on('value', (response) => {
@@ -53,7 +54,7 @@ class MainComp extends Component {
 		e.preventDefault();
 
 		// Open portal to Firebase
-		const dbRef = firebase.database().ref();
+		const dbRef = firebase.database().ref('tasks');
 
 		if (!this.state.usrInput.length) {
 			this.setState({ validationAlert: true });
@@ -70,10 +71,14 @@ class MainComp extends Component {
 	// Delete that specific task from Firebase
 	handleRemove = (taskKey) => {
 		// Open up Firebase portal
-		const dbRef = firebase.database().ref();
+		const dbRef = firebase.database().ref('tasks');
 
 		// Delete the task based on bookKey
 		dbRef.child(taskKey).remove();
+	};
+
+	handleComplete = (taskKey) => {
+		console.log();
 	};
 
 	render() {

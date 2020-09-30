@@ -8,7 +8,7 @@ const Tasks = (props) => {
 			{tasksArray.map((task, index) => {
 				return (
 					<Task
-						id={index}
+						id={task.key}
 						task={task.eachTask}
 						key={task.key}
 						delClick={(e) => {
