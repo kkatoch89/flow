@@ -1,0 +1,33 @@
+/**********************  
+  FOOTER
+**********************/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Secular+One&family=Source+Sans+Pro&display=swap');
+
+footer {
+	display: block;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+footer p {
+	color: rgb(189, 189, 189);
+}
+
+.footer-bottom * {
+	display: block;
+	background-color: #333333;
+	text-align: center;
+	text-transform: initial;
+	font-family: 'Monserrat', sans-serif;
+	font-weight: 700;
+	line-height: 30px;
+	margin: 0;
+}
+
+.footer-bottom p {
+	font-size: 10px;
+	border-top: 2px solid rgba(255, 68, 0, 0.7);
+}

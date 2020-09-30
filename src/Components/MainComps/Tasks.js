@@ -4,10 +4,11 @@ import Task from './Task.js';
 const Tasks = (props) => {
 	const tasksArray = props.tasksArr;
 	return (
-		<ul>
-			{tasksArray.map((task) => {
+		<ul className="tasks">
+			{tasksArray.map((task, index) => {
 				return (
 					<Task
+						id={index}
 						task={task.eachTask}
 						key={task.key}
 						delClick={(e) => {

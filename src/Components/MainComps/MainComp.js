@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
-import Styles from '../../App.css';
+import Styles from './Main.css';
 import InputComp from './InputComp.js';
 import Tasks from './Tasks.js';
 
@@ -39,8 +39,11 @@ class MainComp extends Component {
 	}
 
 	addTaskHandler = (e) => {
+		let usrInput =
+			e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+
 		this.setState({
-			usrInput: e.target.value,
+			usrInput,
 		});
 	};
 
@@ -52,11 +55,15 @@ class MainComp extends Component {
 		// Open portal to Firebase
 		const dbRef = firebase.database().ref();
 
-		// Add new record to Firebase
-		dbRef.push(this.state.usrInput);
-		this.setState({
-			usrInput: '',
-		});
+		if (!this.state.usrInput.length) {
+			this.setState({ validationAlert: true });
+		} else {
+			// Add new record to Firebase
+			dbRef.push(this.state.usrInput);
+			this.setState({
+				usrInput: '',
+			});
+		}
 	};
 
 	// Get the specific task key to remove

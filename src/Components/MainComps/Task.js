@@ -1,16 +1,15 @@
 import React from 'react';
-import Styles from '../../App.css';
 import CheckBox from './CheckBox.js';
 import DelBtn from './DelBtn.js';
 
 const Task = (props) => {
 	return (
-		<li>
-			<p>
-				<CheckBox />
+		<li className="task">
+			<CheckBox id={props.id} />
+			<label className="label" for={props.id}>
 				{props.task}
-				<DelBtn delClick={props.delClick} />
-			</p>
+			</label>
+			<DelBtn delClick={props.delClick} />
 		</li>
 	);
 };
