@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/karan-katoch-project-five/static/css/main.f2835705.chunk.css",
-    "main.js": "/karan-katoch-project-five/static/js/main.f2508f0a.chunk.js",
-    "main.js.map": "/karan-katoch-project-five/static/js/main.f2508f0a.chunk.js.map",
+    "main.css": "/karan-katoch-project-five/static/css/main.948cc6aa.chunk.css",
+    "main.js": "/karan-katoch-project-five/static/js/main.f8ba6403.chunk.js",
+    "main.js.map": "/karan-katoch-project-five/static/js/main.f8ba6403.chunk.js.map",
     "runtime-main.js": "/karan-katoch-project-five/static/js/runtime-main.445180a6.js",
     "runtime-main.js.map": "/karan-katoch-project-five/static/js/runtime-main.445180a6.js.map",
     "static/js/2.9d063318.chunk.js": "/karan-katoch-project-five/static/js/2.9d063318.chunk.js",
     "static/js/2.9d063318.chunk.js.map": "/karan-katoch-project-five/static/js/2.9d063318.chunk.js.map",
     "index.html": "/karan-katoch-project-five/index.html",
-    "precache-manifest.ac1536cf4113399919710463f12893ea.js": "/karan-katoch-project-five/precache-manifest.ac1536cf4113399919710463f12893ea.js",
+    "precache-manifest.99e2e83a11dc5f988b2463ab2d6a40e0.js": "/karan-katoch-project-five/precache-manifest.99e2e83a11dc5f988b2463ab2d6a40e0.js",
     "service-worker.js": "/karan-katoch-project-five/service-worker.js",
-    "static/css/main.f2835705.chunk.css.map": "/karan-katoch-project-five/static/css/main.f2835705.chunk.css.map",
+    "static/css/main.948cc6aa.chunk.css.map": "/karan-katoch-project-five/static/css/main.948cc6aa.chunk.css.map",
     "static/js/2.9d063318.chunk.js.LICENSE.txt": "/karan-katoch-project-five/static/js/2.9d063318.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.445180a6.js",
     "static/js/2.9d063318.chunk.js",
-    "static/css/main.f2835705.chunk.css",
-    "static/js/main.f2508f0a.chunk.js"
+    "static/css/main.948cc6aa.chunk.css",
+    "static/js/main.f8ba6403.chunk.js"
   ]
 }
