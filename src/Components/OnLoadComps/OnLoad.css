@@ -1,6 +1,6 @@
 .onLoad {
 	background: #f3904f;
-	height: 200vw;
+	height: 200vh;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
@@ -30,7 +30,7 @@
 .fadeOut {
 	animation: fadeout 4s;
 	animation-fill-mode: forwards;
-	transition-timing-function: cubic-bezier(1, 0.03, 1, 0.54);
+	transition-timing-function: ease-out;
 	animation-delay: 2s;
 }
 
@@ -38,9 +38,11 @@
 	from {
 		left: 0;
 		opacity: 1;
+		height: 200vh;
 	}
 	to {
 		left: 100%;
-		opacity: 0.2;
+		opacity: 0;
+		height: 100vh;
 	}
 }
