@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6cd75b42d0fd10bb66946f08853d93f",
+    "revision": "0ca9c27b340ce8f0b3afa0f27820192b",
     "url": "/karan-katoch-project-five/index.html"
   },
   {
-    "revision": "e352d195813bc238bcfc",
-    "url": "/karan-katoch-project-five/static/css/main.948cc6aa.chunk.css"
+    "revision": "6a51bf02653b7f03b419",
+    "url": "/karan-katoch-project-five/static/css/main.64432624.chunk.css"
   },
   {
     "revision": "435bb07108b038bed876",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/karan-katoch-project-five/static/js/2.9d063318.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e352d195813bc238bcfc",
-    "url": "/karan-katoch-project-five/static/js/main.f8ba6403.chunk.js"
+    "revision": "6a51bf02653b7f03b419",
+    "url": "/karan-katoch-project-five/static/js/main.e1f9c83b.chunk.js"
   },
   {
     "revision": "82424a233c0dd4b4fec9",
