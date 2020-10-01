@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import OnLoad from './Components/OnLoadComps/OnLoad.js';
 import Header from './Components/HeaderComps/Header.js';
 import MainComp from './Components/MainComps/MainComp.js';
 import Footer from './Components/FooterComps/Footer.js';
@@ -8,6 +9,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
+				{/* On Load Component */}
+				<OnLoad />
 				{/* Header component */}
 				<Header />
 				{/* Main component */}

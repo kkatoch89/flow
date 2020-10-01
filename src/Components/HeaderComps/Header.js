@@ -70,7 +70,7 @@ class Header extends Component {
 			<header style={heroImg}>
 				<div className="wrapper">
 					<div className="logoClockBox">
-						<Logo />{' '}
+						<Logo styling="headerLogoBox" />{' '}
 						<div className="dateTimeBox">
 							<Clock />
 							<Date tz={this.state.dateTime.timeZone} />

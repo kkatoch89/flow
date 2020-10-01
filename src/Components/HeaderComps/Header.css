@@ -21,9 +21,12 @@ p {
 	font-size: 2.4rem;
 	text-transform: capitalize;
 	color: rgb(189, 189, 189);
+	width: auto;
+	background-color: transparent;
+	border: none;
 }
 
-.logoBox {
+.headerLogoBox {
 	font-family: 'Secular One', sans-serif;
 	font-size: 1.6rem;
 	display: flex;
@@ -31,10 +34,10 @@ p {
 	/* border: orangered 2px solid; */
 }
 
-.logoBox p {
+.headerLogoBox p {
 	font-size: 7px;
 	letter-spacing: 1.7px;
-	background-color: rgba(255, 68, 0, 0.7);
+	background-color: #f3904f;
 	padding: 2px;
 }
 
@@ -42,7 +45,7 @@ p {
 	font-family: 'Secular One', sans-serif;
 	font-size: 11px;
 	color: white;
-	background-color: rgba(255, 68, 0, 0.7);
+	background-color: #f3904f;
 	padding: 2px;
 }
 

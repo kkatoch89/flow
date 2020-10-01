@@ -1,0 +1,45 @@
+.onLoad {
+	background: #f3904f;
+	height: 200vw;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	padding-top: 33vh;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	color: white;
+}
+
+.onLoadLogoBox {
+	font-family: 'Secular One', sans-serif;
+	font-size: 4rem;
+	display: flex;
+	text-transform: uppercase;
+	/* border: orangered 2px solid; */
+}
+
+.onLoadLogoBox p {
+	font-size: 17.5px;
+	letter-spacing: 1.7px;
+	color: #f3904f;
+	background-color: white;
+	padding: 2px;
+}
+
+.fadeOut {
+	animation: fadeout 6s;
+	animation-fill-mode: forwards;
+	transition-timing-function: cubic-bezier(1, 0.03, 1, 0.54);
+}
+
+@keyframes fadeout {
+	from {
+		left: 0;
+		opacity: 1;
+	}
+	to {
+		left: 100%;
+		opacity: 0.2;
+	}
+}

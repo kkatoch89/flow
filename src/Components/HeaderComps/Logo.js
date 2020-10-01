@@ -2,10 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckDouble } from '@fortawesome/free-solid-svg-icons';
 
-const Logo = () => {
+const Logo = (props) => {
 	return (
 		<>
-			<div className="logoBox">
+			<div className={props.styling}>
 				<FontAwesomeIcon icon={faCheckDouble} />
 				<div>
 					<h2>Flow</h2>

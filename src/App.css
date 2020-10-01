@@ -308,6 +308,11 @@ textarea {
 **********************/
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Secular+One&family=Source+Sans+Pro&display=swap');
 
+html {
+	overflow-x: hidden;
+	/* overflow-y: hidden; */
+}
+
 body {
 	font-size: 62.5%;
 	background-color: #333333;
