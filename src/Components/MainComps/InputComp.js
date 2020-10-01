@@ -9,7 +9,7 @@ const InputComp = (props) => {
 				id="newTask"
 				value={props.value}
 				onChange={props.change}
-				placeholder="Add a task here"
+				placeholder="Enter task here"
 			></input>
 			<button type="submit" onClick={props.click} Val>
 				Add Task

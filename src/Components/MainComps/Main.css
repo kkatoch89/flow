@@ -3,7 +3,9 @@
 **********************/
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Secular+One&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
 .form {
+	width: 100%;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	border: 8px solid #3b4371;
@@ -125,29 +127,29 @@ form button:active {
 	box-shadow: 0 0 8px #5e9ed6;
 }
 
-/* Animation cross off task */
-@keyframes strike {
-	0% {
-		width: 0;
+@media (max-width: 1000px) {
+	.form {
+		display: grid;
+		grid-template-columns: 1fr;
+		border: 8px solid #3b4371;
 	}
-	100% {
-		width: 90%;
+
+	form input {
+		text-align: center;
 	}
 }
-.strike {
-	position: relative;
-}
-.strike::after {
-	content: ' ';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 90%;
-	height: 1px;
-	background: black;
-	animation-name: strike;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
+
+@media (max-width: 530px) {
+	form input,
+	form button {
+		font-size: 1.4rem;
+	}
+
+	.label {
+		font-size: 1.5rem;
+	}
+
+	.checkbox:checked + .label::after {
+		top: 12.4px;
+	}
 }
