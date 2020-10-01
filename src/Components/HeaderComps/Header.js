@@ -5,6 +5,7 @@ import UserName from './UserName.js';
 import Logo from './Logo.js';
 import Clock from './Clock.js';
 import Date from './Date.js';
+import OnLoad from '../OnLoadComps/OnLoad.js';
 
 class Header extends Component {
 	constructor(props) {
@@ -21,6 +22,7 @@ class Header extends Component {
 			dateTime: {
 				timeZone: 'US/Pacific',
 			},
+			loaded: false,
 		};
 	}
 
@@ -39,19 +41,14 @@ class Header extends Component {
 			// console.log(res);
 			const randIndx = Math.floor(Math.random() * res.data.length);
 			const randImg = res.data[randIndx].urls.full;
-			this.setState(
-				(prevState) => {
-					let bkground = Object.assign({}, prevState.bkground);
-					bkground.url = randImg;
-					bkground.headerImg = `linear-gradient(0deg, rgba(51,51, 51,.5), rgba(64, 115, 158,.5)), url(
+			this.setState((prevState) => {
+				let bkground = Object.assign({}, prevState.bkground);
+				bkground.url = randImg;
+				bkground.headerImg = `linear-gradient(0deg, rgba(51,51, 51,.5), rgba(64, 115, 158,.5)), url(
 						${randImg}
 						)`;
-					return { bkground };
-				},
-				() => {
-					// console.log('SetState: ', this.state.bkground.headerImg);
-				}
-			);
+				return { bkground, loaded: true };
+			});
 			// console.log('ComponentDidMount: ', this.state.bkground.headerImg);
 		});
 	}
@@ -68,6 +65,7 @@ class Header extends Component {
 
 		return (
 			<header style={heroImg}>
+				<OnLoad loaded={this.state.loaded} />
 				<div className="wrapper">
 					<div className="logoClockBox">
 						<Logo styling="headerLogoBox" />{' '}

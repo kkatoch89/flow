@@ -9,8 +9,6 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				{/* On Load Component */}
-				<OnLoad />
 				{/* Header component */}
 				<Header />
 				{/* Main component */}
