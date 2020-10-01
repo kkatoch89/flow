@@ -43,7 +43,7 @@ class Header extends Component {
 			this.setState((prevState) => {
 				let bkground = Object.assign({}, prevState.bkground);
 				bkground.url = randImg;
-				bkground.headerImg = `linear-gradient(0deg, rgba(51,51, 51,.5), rgba(64, 115, 158,.5)), url(
+				bkground.headerImg = `linear-gradient(0deg, rgba(51,51, 51,.6), rgba(64, 115, 158,.6)), url(
 						${randImg}
 						)`;
 				// Return header image url, styling string and loaded state which is trigger-

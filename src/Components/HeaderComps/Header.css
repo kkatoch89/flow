@@ -58,6 +58,7 @@ p {
 .dateTimeBox {
 	display: flex;
 	flex-direction: column;
+	width: 90px;
 }
 
 .logoClockBox {

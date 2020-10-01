@@ -2,20 +2,35 @@ import React, { Component } from 'react';
 import firebase from '../../firebase';
 import InputComp from './InputComp.js';
 import Tasks from './Tasks.js';
+import moment from 'moment';
 
 class MainComp extends Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 		this.state = {
 			tasks: [],
 			usrInput: '',
+			referenceDate: 'October 1, 2020',
 		};
 	}
 
 	// Link with Firebase to store and manage tasks
 	componentDidMount() {
 		// Open portal to Firebase
-		const dbRef = firebase.database().ref('tasks');
+		const dbRef = firebase.database().ref('/tasks');
+
+		const presentDate = moment.tz(moment(), 'America/New_York').format('LL');
+
+		// if (this.state.referenceDate !== presentDate) {
+		// 	dbRef
+		// }
+
+		// console.log(dbRef.orderByChild('complete').equalTo(true));
+		console.log(dbRef);
+
+		for (const key in dbRef) {
+			console.log(dbRef[key]);
+		}
 
 		// Listen to value change
 		dbRef.on('value', (response) => {
@@ -37,6 +52,10 @@ class MainComp extends Component {
 				tasks: newState,
 			});
 		});
+
+		const now = Date.now();
+		const cutOff = now - 30 * 1000;
+		const old = dbRef;
 	}
 
 	// Method for onChange listener on input element
