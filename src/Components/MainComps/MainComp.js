@@ -12,6 +12,7 @@ class MainComp extends Component {
 		};
 	}
 
+	// Link with Firebase to store and manage tasks
 	componentDidMount() {
 		// Open portal to Firebase
 		const dbRef = firebase.database().ref('tasks');
@@ -38,7 +39,9 @@ class MainComp extends Component {
 		});
 	}
 
+	// Method for onChange listener on input element
 	addTaskHandler = (e) => {
+		// Capitalize first letter of all strings typed
 		let usrInput =
 			e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
 
@@ -86,10 +89,12 @@ class MainComp extends Component {
 		// Open up Firebase portal
 		const dbRef = firebase.database().ref('tasks');
 
+		// Update status of complete to !complete
 		const statusUpdate = {
 			complete: !status,
 		};
 
+		// Update status (!complete) in Firebase
 		dbRef.child(taskKey).update(statusUpdate);
 	};
 
@@ -99,11 +104,13 @@ class MainComp extends Component {
 			<main>
 				<div className="wrapper">
 					<section>
+						{/* Form with input and button */}
 						<InputComp
 							value={usrInput}
 							change={this.addTaskHandler}
 							click={this.submitTaskHandler}
 						/>
+						{/* Task list */}
 						<Tasks
 							tasksArr={tasks}
 							delClick={this.handleRemove}

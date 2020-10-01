@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Logo from '../HeaderComps/Logo.js';
 import './OnLoad.css';
 
+// Creating effect on page load
+// Connected to Header component (props from Header comp)
+// Once Header component successfully completes API call and setState-
+// 2nd param of setState is function that initiates fade-away animation
 const OnLoad = (props) => {
 	let loadAnimation = 'onLoad';
 	if (props.loaded) {
@@ -16,15 +20,3 @@ const OnLoad = (props) => {
 };
 
 export default OnLoad;
-
-// class OnLoad extends Component {
-// 	render() {
-// 		return (
-// 			<div className="onLoad">
-// 				<Logo styling="onLoadLogoBox" />
-// 			</div>
-// 		);
-// 	}
-// }
-
-// export default OnLoad;

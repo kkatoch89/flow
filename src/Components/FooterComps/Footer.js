@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './Footer.css';
 
+// Footer functional component for 'Created at Juno' message
 const Footer = () => {
 	return (
 		<footer>

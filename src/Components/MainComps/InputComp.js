@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Create form element for user to type in tasks and submit via button
 const InputComp = (props) => {
 	return (
 		<form action="" className="form">

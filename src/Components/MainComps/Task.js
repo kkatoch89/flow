@@ -2,6 +2,8 @@ import React from 'react';
 import CheckBox from './CheckBox.js';
 import DelBtn from './DelBtn.js';
 
+// Each task list item
+// Contains submitted task from form, checkbox and delete button
 const Task = (props) => {
 	console.log(props);
 	let labelStyle = 'label';
